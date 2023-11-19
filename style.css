@@ -29,26 +29,31 @@ body{
 .image img{
     width: 250px;
     border-radius: 10px;
+    overflow: hidden;
 }
 .hover-section{
+    overflow: hidden;
     position: relative;
 }
 .hover-section span{
+    margin-bottom: 6px;
+    overflow: hidden;
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    width: 250px;
+    /* width: 250px; */
     z-index: 1;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.25s ease;
-    height: 250px;
+    /* height: 250px; */
 }
 
 .hover-section span:hover{
-    height: 250px;
+    /* height: 250px; */
+    overflow: hidden;
     background: transparent url(./images/icon-view.svg) no-repeat;
     background-position: center;
     background-color:hsla(178, 100%, 50%, 0.2);
@@ -87,7 +92,7 @@ body{
     color: hsl(0, 1%, 61%);
 }
 hr{
-    max-width: 250px;
+    max-width: 100%;
     border: 1px solid rgb(61, 61, 61);
     border-radius: 50%;
     margin-block: 10px;
@@ -112,11 +117,19 @@ hr{
     cursor: pointer;
 }
 
-@media only screen and(min-width:775px){
+@media (min-width:770px){
     .container{
-        width: 400px;
+        max-width: 400px;
     }
     .image img{
-       width: 300px;
+       width: 350px;
     }
+    .middle{
+
+        justify-content: space-around;
+    }
+    .creator{
+        justify-content: space-around;
+    }
+
 }
